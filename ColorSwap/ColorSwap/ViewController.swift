@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool {
+    
         return true
+    
     }
     
     @IBOutlet weak var redButton: UIButton!
