@@ -2,6 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,58 +19,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUX-wL-Z2i">
-                                <rect key="frame" x="260" y="218" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUX-wL-Z2i">
+                                <rect key="frame" x="16" y="508" width="80" height="50"/>
                                 <color key="backgroundColor" red="0.84447592439999997" green="0.84216646299999998" blue="0.86111582880000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="RED">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="r6V-Wm-CSR"/>
+                                </constraints>
+                                <state key="normal" title="STOP">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIi-13-SO1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-Fi-D5b">
-                                <rect key="frame" x="260" y="256" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-Fi-D5b">
+                                <rect key="frame" x="504" y="508" width="80" height="50"/>
                                 <color key="backgroundColor" red="0.84447592439999997" green="0.84216646299999998" blue="0.86111582880000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="GREEN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7BP-PG-2xc"/>
+                                    <constraint firstAttribute="width" constant="80" id="Srp-Qr-s18"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ioQ-1m-c2d"/>
+                                </constraints>
+                                <state key="normal" title="START">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W0F-0x-Osp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enu-4Q-GDe">
-                                <rect key="frame" x="260" y="294" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLA-Lf-MCZ">
+                                <rect key="frame" x="260" y="508" width="80" height="50"/>
                                 <color key="backgroundColor" red="0.84447592439999997" green="0.84216646299999998" blue="0.86111582880000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="BLUE">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="colorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JTB-0F-fSY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLA-Lf-MCZ">
-                                <rect key="frame" x="260" y="332" width="80" height="30"/>
-                                <color key="backgroundColor" red="0.84447592439999997" green="0.84216646299999998" blue="0.86111582880000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="YELLOW">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="8wE-b5-7CW"/>
+                                    <constraint firstAttribute="height" constant="50" id="WKV-pK-pjp"/>
+                                    <constraint firstAttribute="width" constant="80" id="mUb-Ok-aVo"/>
+                                </constraints>
+                                <state key="normal" title="WAIT">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTN-TH-aLf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxG-3I-VL7">
-                                <rect key="frame" x="200" y="121" width="200" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OUX-wL-Z2i" firstAttribute="top" secondItem="wLA-Lf-MCZ" secondAttribute="top" id="0t5-X8-tCY"/>
+                            <constraint firstItem="3Vb-Fi-D5b" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CEC-X0-ohy"/>
+                            <constraint firstItem="OUX-wL-Z2i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CG8-31-RIt"/>
+                            <constraint firstItem="wLA-Lf-MCZ" firstAttribute="baseline" secondItem="3Vb-Fi-D5b" secondAttribute="firstBaseline" id="FG7-oF-Zvl"/>
+                            <constraint firstItem="OUX-wL-Z2i" firstAttribute="baseline" secondItem="wLA-Lf-MCZ" secondAttribute="baseline" id="cIq-hw-ajv"/>
+                            <constraint firstItem="OUX-wL-Z2i" firstAttribute="firstBaseline" secondItem="wLA-Lf-MCZ" secondAttribute="baseline" id="hOL-8s-zl2"/>
+                            <constraint firstItem="wLA-Lf-MCZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jcr-bP-Idc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OUX-wL-Z2i" secondAttribute="bottom" constant="42" id="rRi-eM-I9X"/>
+                            <constraint firstItem="wLA-Lf-MCZ" firstAttribute="top" secondItem="3Vb-Fi-D5b" secondAttribute="top" id="zjH-Cr-gah"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueButton" destination="enu-4Q-GDe" id="Z8I-GU-cbY"/>
-                        <outlet property="colorTextLabel" destination="RxG-3I-VL7" id="lXe-e8-iu8"/>
                         <outlet property="greenButton" destination="3Vb-Fi-D5b" id="L2G-X4-z2v"/>
                         <outlet property="redButton" destination="OUX-wL-Z2i" id="SKS-Ao-rAM"/>
                         <outlet property="yellowButton" destination="wLA-Lf-MCZ" id="lFr-kb-X8D"/>
@@ -75,6 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="360" y="418"/>
         </scene>
     </scenes>
 </document>

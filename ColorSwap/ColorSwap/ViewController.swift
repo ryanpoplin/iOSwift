@@ -10,13 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var colorTextLabel: UILabel!
+    
     
     @IBOutlet weak var redButton: UIButton!
     
     @IBOutlet weak var greenButton: UIButton!
-    
-    @IBOutlet weak var blueButton: UIButton!
     
     @IBOutlet weak var yellowButton: UIButton!
     
@@ -24,30 +22,21 @@ class ViewController: UIViewController {
     
         let buttonTitle = sender.titleForState(.Normal)!
         
-        let colorLabelText = "\(buttonTitle)"
-        
         redButton.exclusiveTouch = true
         greenButton.exclusiveTouch = true
-        blueButton.exclusiveTouch = true
         yellowButton.exclusiveTouch = true
-        
-        colorTextLabel.text = colorLabelText
         
         switch buttonTitle {
             
-        case "RED":
+        case "STOP":
             
             self.view.backgroundColor = UIColor.redColor()
             
-        case "GREEN":
+        case "START":
             
             self.view.backgroundColor = UIColor.greenColor()
             
-        case "BLUE":
-            
-            self.view.backgroundColor = UIColor.blueColor()
-            
-        case "YELLOW":
+        case "WAIT":
             
             self.view.backgroundColor = UIColor.yellowColor()
             
